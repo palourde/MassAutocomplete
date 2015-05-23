@@ -96,6 +96,11 @@ angular.module('MassAutoComplete', [])
       bound_events[config.EVENTS.KEYDOWN] = null;
       bound_events[config.EVENTS.RESIZE] = null;
 
+      var bound_events = {};
+      bound_events[EVENTS.BLUR] = null;
+      bound_events[EVENTS.KEYDOWN] = null;
+      bound_events[EVENTS.RESIZE] = null;
+
       var _user_options = $scope.options() || {};
       var user_options = {
         debounce_position: _user_options.debounce_position || config.DEBOUNCE.position,
