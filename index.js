@@ -1,5 +1,7 @@
 "use strict";
 
+/* global angular, Fuse, console */
+
 var app = angular.module('app', ['ngSanitize', 'MassAutoComplete']);
 
 app.controller('mainCtrl', function ($scope, $sce, $q, $timeout) {
@@ -32,8 +34,9 @@ app.controller('mainCtrl', function ($scope, $sce, $q, $timeout) {
 
     for (var i = 0; i < states.length && results.length < 10; i++) {
       var state = states[i];
-      if (state.toLowerCase().indexOf(q) == 0)
+      if (state.toLowerCase().indexOf(q) === 0) {
         results.push({ label: state, value: state });
+      }
     }
 
     return results;
