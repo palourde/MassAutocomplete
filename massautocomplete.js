@@ -61,8 +61,7 @@ angular.module('MassAutoComplete', [])
       '<div class="ac-container" ' +
            'aria-autocomplete="list" ' +
            'role="listbox" ' +
-           'ng-show="show_autocomplete" ' +
-           'style="position:absolute;">' +
+           'ng-show="show_autocomplete">' +
 
         '<ul class="ac-menu"> ' +
           '<li ng-repeat="result in results" ng-if="$index > 0" ' +
